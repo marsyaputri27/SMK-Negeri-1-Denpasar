@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/show.css">
+</head>
+<body>
+    <h1>Rincian siswa kelas VII jurusan elektronika</h1>
+    <div class="container">
+        <h4>Nama siswa  : <%= siswas.nama %></h4>
+        <h4>No absen    : <%= siswas.absen %></h4>
+        <h4>NIS         : <%= siswas.nis %></h4>
+    </div>
+
+    <div class="button">
+        <button><a href="/siswa">Back</a></button>
+        <button><a href="/siswa/<%= siswas._id %>/edit">Edit</a></button>
+        
+        <form method="post" action="/siswa/<%= siswas._id %>?_method=DELETE">
+            <button>Delete</button>
+        </form>
+    </div>
+</body>
+</html>

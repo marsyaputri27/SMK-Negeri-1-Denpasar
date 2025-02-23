@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/edit.css">
+</head>
+<body>
+    <h1>Silahkan update nama,absen dan NIS siswa kelas VII jurusan elektronika</h1>
+    <form action="/siswa/<%= siswas.id %>?_method=PUT" method="post">
+        <label for="nama">Maukkan nama siswa baru</label>
+        <input type="text" name="nama" id="nama" placeholder="nama siswa baru" value="<%= siswas.nama %>"><br>
+        <label for="nis">Maukkan NIK siswa baru</label>
+        <input type="number" name="nis" id="nis" placeholder="NIS siswa baru" value="<%= siswas.nis%>"><br>
+        <label for="absen">Masukkan absen siswa baru</label>
+        <input type="number"name="absen" id="absen" placeholder="absen siswa baru" value="<%= siswas.absen %>"><br>
+        <button>Submit</button>
+        <button><a href="/siswa/<%=siswas._id %>">Back</a></button>
+    </form>
+</body>
+</html>
